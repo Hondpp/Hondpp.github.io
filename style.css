@@ -1,0 +1,111 @@
+/*Stylesheet für die Beispielseite aus "Einstieg in CSS"*/
+*
+	{
+			padding:0;
+			margin:0;
+	}
+html
+	{
+			overflow-y:scroll;
+	}
+body
+	{
+		background-color: #8c8c8c;  /*Hintergrundfarbe*/
+		color: white; 	/*Schriftfarbe*/
+		font-family: Verdana, Arial, Helvetica, sans-serif;	
+		font-size: 87.5%; 	/*Schriftgröße 14px*/
+		background-image: url(hintergrund.jpg);
+	}
+	
+div#wrapper
+	{
+		background-color: light blue;
+		color: black;
+		width:720px;	/*feste Breite Definieren*/
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+div#kopfbereich
+	{
+		background-color: blue;
+		/*Gelb-Orange*/
+		color: white;
+		padding-top:10px;
+		padding-right: 20px;
+		padding-bottom: 0;
+		padding-left:20px;
+		padding:10px;
+		border: 10px solid #d9d9d9;
+	}
+	
+	
+img#logo
+	{
+		/*Gestalte die Grafik mit id="logo"*/
+		background-color: black;
+		color: white;
+	}
+	
+div#fussbereich
+	{
+		padding-top:10px;	/*unterhalb der Ramenlinie*/
+		padding-right:20px;
+		padding-bottom:20px;
+		padding-left: 20px;
+		border-top:1px solid #8c8c8c;	/*Ramenlineie oben*/
+		margin-top:20px;	/*oberhalb der Ramenlinie*/
+		
+	}
+	
+	
+h1
+	{
+		font-size: 150%;
+	}
+	
+h2
+	{
+		font-size: 130%;
+	}
+	
+address
+	{
+		text-align: center;/*Zentrieren*/
+		font-size: 80%;		/*etwas kleiner als der Rest*/
+		font-style: normal; /*normale Schrift, nicht Kursiv*/
+		letter-spacing: 2px;	/*Abstand zwischen den Buchstaben*/
+		line-height: 1.5;	/*Zeilenabstand, ohne Einheit*/
+	}
+	
+a
+	{
+		text-decoration: none;
+	}
+a:link
+	{
+		color: white;
+	}
+a:visited
+	{
+		color: #cc6666;
+	}
+	
+a:hover,a:focus
+	{
+		/*text-decoration: underline;*/
+		border-bottom: 1px solid #d90000;
+		
+	}
+a:active
+	{
+		color: white;
+		background-color: d90000;
+	}
+h2, p, ul, ol, blockquote{
+	margin-bottom: 1em;
+	margin-left:20px;
+}
+ul ul,ul ol,ol ol,ol ul{margin-bottom:0;}
