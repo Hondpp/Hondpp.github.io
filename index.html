@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Torben</title>
+    <title>Chatroom</title>
     <style>
         #chatbox {
             width: 400px;
@@ -21,6 +21,8 @@
     <button onclick="sendMessage()">Senden</button>
 
     <script>
+        var messages = [];
+
         function sendMessage() {
             var username = document.getElementById('username').value;
             var message = document.getElementById('message').value;
@@ -31,7 +33,21 @@
                 newMessage.textContent = username + ": " + message;
                 chatbox.appendChild(newMessage);
 
+                messages.push(newMessage);
+
                 document.getElementById('message').value = "";
+
+                setTimeout(function() {
+                    removeMessage(newMessage);
+                }, 5000); // Nachrichten werden nach 5 Sekunden entfernt
+            }
+        }
+
+        function removeMessage(messageElement) {
+            var index = messages.indexOf(messageElement);
+            if (index !== -1) {
+                messages.splice(index, 1);
+                messageElement.parentNode.removeChild(messageElement);
             }
         }
     </script>
