@@ -1,39 +1,39 @@
+<!DOCTYPE html>
 <html>
-<html lang="de">
 <head>
-<meta charset="utf-8">
-<title>Startseite- Little Boxes(Websiten gestalten mit HTML und CSS)</title>
-<meta name="description" content="Little Boxes führt Sie durch das Labyrinth von CSS und HTML, von den ersten Schritten bis zur proffesionell gestalteten Website.">
-<link href="style.css" rel="stylesheet" media="screen">
+    <title>Torben</title>
+    <style>
+        #chatbox {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
 </head>
 <body>
-<!--Der Body erscheint im Browserfenster-->
-<div id="wrapper">
-	<div id="kopfbereich">
-		
-		<p id="slogan"><h2>Probe Website</p>
-		
-	</div id="kopfbereich">
-	<div id="navibereich">
-		<ul>
-			<li><a href="index.html">Startseite</a></li>
-			<li><a href="kontakt.html">Kontakt</a></li>
-		</ul>
-	</div id="navibereich">
-	<div id="textbereich">
-		<br>
-		<h1>Der Schmock des Jahrtausends:
-			<br>
-    
-		
-	</div id="textbereich">
-	<div id="fussbereich">
-	<address>
-	Schmock &middot; Schmockweg 19 &middot; 01234 Schmockhausen
-	<br>
-	Tel.: 01234 567891
-	</address>
-	</div id="fussbereich">
-</div id="wrapper"><!--Ende Wrapper-->
+    <h2>Chatroom</h2>
+    <div id="chatbox"></div>
+
+    <input type="text" id="username" placeholder="Benutzername">
+    <input type="text" id="message" placeholder="Nachricht">
+    <button onclick="sendMessage()">Senden</button>
+
+    <script>
+        function sendMessage() {
+            var username = document.getElementById('username').value;
+            var message = document.getElementById('message').value;
+
+            if (username && message) {
+                var chatbox = document.getElementById('chatbox');
+                var newMessage = document.createElement('p');
+                newMessage.textContent = username + ": " + message;
+                chatbox.appendChild(newMessage);
+
+                document.getElementById('message').value = "";
+            }
+        }
+    </script>
 </body>
 </html>
